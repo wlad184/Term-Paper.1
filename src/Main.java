@@ -1,16 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         Employee[] empl = new Employee[10];
-        empl[0] = new Employee("Фёдоров Семён семёнович", 97500f, 1);
-        empl[1] = new Employee("Фёдорова Светлана Александровна", 90500f, 1);
-        empl[2] = new Employee("Иванов Игорь Артемьевич", 80700f, 2);
+        empl[0] = new Employee("Койнова Вера Анатольевна", 45000f, 4);
+        empl[1] = new Employee("Сидоров Виктор Васильевич", 65000f, 3);
+        empl[2] = new Employee("Коновалов Серьгей Витальевич", 35555f, 5);
         empl[3] = new Employee("Сидоров Антон Васильевич", 80000f, 2);
-        empl[4] = new Employee("Абрамов Артём Валерьевич", 65000f, 3);
-        empl[5] = new Employee("Сидоров Виктор Васильевич", 65000f, 3);
-        empl[6] = new Employee("Колмогорова Вероника Игнатьевна", 48800f, 4);
-        empl[7] = new Employee("Койнова Вера Анатольевна", 45000f, 4);
-        empl[8] = new Employee("Коновалов Серьгей Витальевич", 35555f, 5);
-        empl[9] = new Employee("Романюк Роман Романович", 30000f, 5);
+        empl[4] = new Employee("Фёдоров Семён семёнович", 97500f, 1);
+        empl[5] = new Employee("Иванов Игорь Артемьевич", 80700f, 2);
+        empl[6] = new Employee("Романюк Роман Романович", 30000f, 5);
+        empl[7] = new Employee("Фёдорова Светлана Александровна", 90500f, 1);
+        empl[8] = new Employee("Абрамов Артём Валерьевич", 65000f, 3);
+        empl[9] = new Employee("Колмогорова Вероника Игнатьевна", 48800f, 4);
+
 
         employeeData(empl);
         sumSalary(empl);
@@ -56,8 +57,8 @@ public class Main {
     public static void maxSalary(Employee salary[]) {
         int j = 0;
         float max = salary[0].getSalary();
-        for (int i = 0; i > salary.length; i++) {
-            if (salary[i].getSalary() < max) {
+        for (int i = 0; i < salary.length; i++) {
+            if (salary[i].getSalary() > max) {
                 max = salary[i].getSalary();
                 j = i;
             }

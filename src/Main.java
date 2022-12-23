@@ -1,5 +1,4 @@
 public class Main {
-
     public static void main(String[] args) {
         Employee[] empl = new Employee[10];
         empl[0] = new Employee("Фёдоров Семён семёнович", 97500f, 1);
@@ -19,8 +18,6 @@ public class Main {
         maxSalary(empl);
         averageSalary(empl);
         employeeFullName(empl);
-
-
     }
 
     // Вывод данных всех сотрудников
@@ -43,25 +40,29 @@ public class Main {
 
     //расчет минимальной зарплаты
     public static void minSalary(Employee salary[]) {
+        int j = 0;
         float min = salary[0].getSalary();
         for (int i = 0; i < salary.length; i++) {
             if (salary[i].getSalary() < min) {
                 min = salary[i].getSalary();
+                j = i;
             }
         }
-        System.out.println("Минимальная зарплата из всех сотрудников = " + min);
+        System.out.println("Минимальная зарплата у сотрудника " + salary[j].getFullName() + " = " + min);
         System.out.println();
     }
 
     //расчет максимальной зарплаты
     public static void maxSalary(Employee salary[]) {
+        int j = 0;
         float max = salary[0].getSalary();
         for (int i = 0; i > salary.length; i++) {
             if (salary[i].getSalary() < max) {
                 max = salary[i].getSalary();
+                j = i;
             }
         }
-        System.out.println("Минимальная зарплата из всех сотрудников = " + max);
+        System.out.println("Максимальная зарплата у сотрудника " + salary[j].getFullName() + " = " + max);
         System.out.println();
     }
 
@@ -84,4 +85,6 @@ public class Main {
         System.out.println();
 
     }
+
+
 }

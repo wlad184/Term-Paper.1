@@ -77,8 +77,9 @@ public class Main {
     }
 
     public static void employeeFullName(Employee fullName[]) {
+        System.out.println("Список ФИО всех сотрудников: ");
         for (int i = 0; i < fullName.length; i++) {
-            System.out.println("Список ФИО всех сотрудников: \n" + fullName[i].getFullName());
+            System.out.println(fullName[i].getFullName());
         }
         System.out.println();
 

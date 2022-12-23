@@ -49,10 +49,10 @@ public class Employee {
     @Override
     public String toString() {
         return
-                "fullName='" + fullName + '\'' +
-                ", salary=" + salary +
-                ", department=" + department +
-                ", id=" + id;
+                "Ф.И.О  " + fullName +
+                ", зарплата = " + salary +
+                ", отдел = " + department +
+                ", табельный номер = " + id;
     }
 
     @Override
